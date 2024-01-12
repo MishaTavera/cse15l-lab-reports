@@ -9,6 +9,6 @@
 ![Image](cdpathfile.png)
 ![Image](catpathfile.png)
 
-![Image](lspathdirectory.png)
+![Image](lapathdirectory.png)
 ![Image](cdpathdirectory.png)
 ![Image](catpathdirectory.png)
