@@ -31,9 +31,13 @@ In this image, as indicated by the prompt I am in the `lecture1` directory. I on
 
 ![Image](cdpathfilee.png)
 
-Here, I once again begin in the `lecture1` directory only now I give a path to a file in this directory, `. in As mentioned previously the `cd` command is short for "change directory" and is meant to do as such. Therefore, when given a path to a file this command will not work resulting in the error message shown in the image. 
+Here, I once again begin in the `lecture1` directory only now I give a path to a file in this directory, `README`. As mentioned previously the `cd` command is short for "change directory" and is meant to do as such. Therefore, when given a path to a file this command will not work resulting in the error message shown in the image. In short, the `cd`  command does not work with paths to files as it is only inteded to work between changing directories. 
 
 ## `cat` Command
+
+![Image](.png)
+
+  Shows the context of a file. This would also work for multiple files as it will concatenate, print the contents of each file one after another, of each path to a file that you have written in the the arguement following the `cat` command. Note that the path must correspond to only files in your current working directory and result in error for files outside the current directory. 
 
 ![Image](cat.png)
 
@@ -45,6 +49,4 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
   I input the command cat followed by the path to directory `lecture1`. The command `cat` does not work with directories therefore it prints a corresponding error message. 
 
 
-![Image](catpathfile.png)
 
-  Shows the context of a file. This would also work for multiple files as it will concatenate, print the contents of each file one after another, of each path to a file that you have written in the the arguement following the `cat` command. Note that the path must correspond to only files in your current working directory and result in error for files outside the current directory. 
