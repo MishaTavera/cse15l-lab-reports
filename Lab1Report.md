@@ -35,7 +35,7 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
 
 ## `cat` Command
 
-![Image](.png)
+![Image](catpathfilee.png)
 
   Shows the context of a file. This would also work for multiple files as it will concatenate, print the contents of each file one after another, of each path to a file that you have written in the the arguement following the `cat` command. Note that the path must correspond to only files in your current working directory and result in error for files outside the current directory. 
 
