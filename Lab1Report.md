@@ -41,7 +41,7 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
 
 ![Image](catt.png)
 
-  Once again to execute this command with no arguments I began from the home directory. 
+  Once again from the `lecture1` directory I use the `cat` command only with no aurgument this time. This then resulted in a completely blank line (no prompt) and repeated back my input until using ctrl + c. This happens because with no arguement after the command there is no file for it to return. So, nothing is returned initially as there is not file to print and whatever is typed after is simply repeated back because our commands were being typed into the `cat` command.
 
 
 ![Image](catpathdirectory.png)
