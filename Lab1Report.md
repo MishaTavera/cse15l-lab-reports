@@ -20,14 +20,13 @@ In this image, as indicated by the prompt I am in the `lecture1` directory. I on
 
 ## `cd` Command
 
-![Image](cd.png)
-
-  For this command I was working in the home directory. `cd` short for "change directory". As indicated by the prompt, here I am beginning in the `~/lecture1/messages` directory. If I only input the command `cd` followed by no argument I am returned to the home directory. This command alone followed by no argument will return us to the home directory no matter the directory we are currently working in. We can once again confirm that we are in the home directory as we look at the prompt where the `~` indicates as such. 
-
-
 ![Image](cdpathdirectory.png)
 
-  In this image I use the command `cd` followed by a path to a directory. Specifically, I am starting in the home directory and I used a path to directory `lecture1` as the argument following the `cd` command. This changes my working directory to the inteded directory that we input as the arguement, in this case `lecture1`. After entering this command, we find that the prompt in the following line has changed and now includes our `lecture1` directory. This change in directory can be noted to be done successfully as the prompt now displays your intended directory.
+ For this command I was working in the home directory. The `cd` command is short for "change directory". In this image I use the command `cd` followed by a path to a directory. Specifically, I am starting in the home directory and I used a path to directory `lecture1` as the argument following the `cd` command. This changes my working directory to the inteded directory that we input as the arguement, in this case `lecture1`. After entering this command, we find that the prompt in the following line has changed and now includes our `lecture1` directory. This change in directory can be noted to be done successfully as the prompt now displays your intended directory.
+
+ ![Image](cdd.png)
+
+   As indicated by the prompt, here I am beginning in the `~/lecture1/messages` directory. If I only input the command `cd` followed by no argument I am returned to the home directory. This command alone followed by no argument will return us to the home directory no matter the directory we are currently working in. We can once again confirm that we are in the home directory as we look at the prompt where the `~` indicates as such. 
 
 
 ![Image](cdpathfile.png)
