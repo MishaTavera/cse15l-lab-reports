@@ -46,7 +46,7 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
 
 ![Image](catpathdirectoryy.png)
 
-  I input the command cat followed by the path to directory `lecture1`. The command `cat` does not work with directories therefore it prints a corresponding error message. 
+  Here, I start in the `lecrure1` directory and use the `cat` command follwed by a path to the directoy `messages` which is a folder within our current working directory. As we have seen the `cat` command works by printing the content of a given file. However, this command cannot do this with paths to directories. Which can be confirmed by the error message we recieve when we attempt to use a path to the directory `messages`. In short, the command `cat` only works with paths to files and will not work with paths to directories therefore, it prints a corresponding error message. 
 
 
 
