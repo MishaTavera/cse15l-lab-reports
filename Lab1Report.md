@@ -29,7 +29,7 @@ In this image, as indicated by the prompt I am in the `lecture1` directory. I on
    As indicated by the prompt, here I am beginning in the `~/lecture1/messages` directory. If I only input the command `cd` followed by no argument I am returned to the home directory. This command alone followed by no argument will return us to the home directory no matter the directory we are currently working in. We can once again confirm that we are in the home directory as we look at the changed prompt where the `~` indicates as such. 
 
 
-![Image]()
+![Image](cdpathfilee.png)
 
 Here, I once again begin in the `lecture1` directory only now I give a path to a file in this directory, `. in As mentioned previously the `cd` command is short for "change directory" and is meant to do as such. Therefore, when given a path to a file this command will not work resulting in the error message shown in the image. 
 
