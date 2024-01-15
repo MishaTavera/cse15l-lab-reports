@@ -39,7 +39,7 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
 
   From the `lecture1` directory I use the command `cat`, short for "concatenate", followed by a path to file `Hello.java`. Then, the contents of the file are successfully printed out. when this command is put into the terminal with a path to a file it will simply return the contents of that file. It is important to note that the path must correspond to only files in your current working directory or it would result in an error for any files outside the current directory.  This would also work for multiple files as it will concatenate, print the contents of each file one after another, of each path to a file that you have written in the the arguement following the `cat` command. 
 
-![Image](.png)
+![Image](catt.png)
 
   Once again to execute this command with no arguments I began from the home directory. 
 
