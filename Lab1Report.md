@@ -2,6 +2,7 @@
 ## Misha Tavera
 ---
 To demonstrate a bit about the `ls`, `cd`, and `cat` commands' functions and how they work we will look at some examples as we explaing more about them.
+
 **`ls` Command**
 ![Image](ls.png)
 First, we start here in the terminal with the command `ls` followed by no arguement. The `ls` command is short for the word "list" . This command alone when written in the terminal shows the folders and files are in the current directory you are working in. The working directory that I began with in this was the home directory. As we can see in this image after inputing `ls` the following line prints out `lecture1` which is bolded and blue, this highlighting signifies folders/directories. Looking into the the tab of your folders and files we can confirm that this output does indeed print a list of the folders/files withing your corresponding directory. Not shown in this example, but other plaintext that could appear here would be indication of files. 
