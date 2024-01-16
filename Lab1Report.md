@@ -16,7 +16,7 @@ In this example, from the home directory I input the `ls` command followed by a 
 
 
 ![Image](lspathfileee.png)
-In this image, as indicated by the prompt I am in the `lecture1` directory. I once again use the `ls` command but this time followed by a path to a file in my directory. The result here is an output of `README`, the arguement we just used. Is this just also successfully listing the file or?
+In this image, as indicated by the prompt I am in the `lecture1` directory. I once again use the `ls` command but this time followed by a path to a file in my directory. The result here is an output of `README`, the arguement we just used. This is successfully executed and listing the files, in this case `README`.
 
 ## `cd` Command
 
