@@ -1,13 +1,13 @@
 # Lab 1 Report 
 ## Misha Tavera
 ---
-  To demonstrate a bit about the `ls`, `cd`, and `cat` commands' functions and how they work we will look at some examples as we explaing more about them. A very simple overview of what each of these cammands do is as follows. The  `ls` command will print a list of your files and folders. The `cd` command will change the directory in which you are working in. Finally the `cat` command will print the contents of a file. To better understand these commands it is also important to know what about paths, which can be described as what goes after a command that specify files or directories. 
+Below are demonstrations of the `ls`, `cd`, and `cat` commands. Specifically we look at the commands' functions and how they work. A very simple overview of what each of these commands do is as follows. The  `ls` command will print a list of your files and folders. The `cd` command will change the directory in which you are working in. Finally the `cat` command will print the contents of a file. To better understand these commands it was also important to know about paths, which can be described as what goes after a command that specify files or directories. 
 
 ## `ls` Command
 
 ![Image](ls.png)
 
-First, we start here in the terminal with the command `ls` followed by no arguement. The `ls` command is short for the word "list" . This command alone when written in the terminal shows the folders and files are in the current directory you are working in. The working directory that I began with in this was the home directory. As we can see in this image after inputing `ls` the following line prints out `lecture1` which is bolded and blue, this highlighting signifies folders/directories. Looking into the the tab of your folders and files we can confirm that this output does indeed print a list of the folders/files withing your corresponding directory. Not shown in this example, but other plaintext that could appear here would be indication of files. 
+First, we start here in the terminal with the command `ls` followed by no arguement. The `ls` command is short for the word "list" . This command alone when written in the terminal shows the folders and files are in the current directory you are working in. The working directory that I began with in this was the home directory. As we can see in this image after inputing `ls` the following line prints out `lecture1` which is bolded and blue, this highlighting signifies folders/directories. Looking into the the tab of your folders and files we can confirm that this output is successful and does indeed print a list of the folders/files within our corresponding directory. Not shown in this example, but other plaintext that could appear here would be indication of files. 
 
 
 ![Image](lapathdirectory.png)
@@ -26,7 +26,7 @@ In this image, as indicated by the prompt I am in the `lecture1` directory. I on
 
  ![Image](cdd.png)
 
-   As indicated by the prompt, here I am beginning in the `~/lecture1/messages` directory. If I only input the command `cd` followed by no argument I am returned to the home directory. This command alone followed by no argument will return us to the home directory no matter the directory we are currently working in. We can once again confirm that we are in the home directory as we look at the changed prompt where the `~` indicates as such. 
+   As indicated by the prompt, here I am beginning in the `~/lecture1/messages` directory. If I only input the command `cd` followed by no argument I am returned to the home directory. This command alone followed by no argument will return us to the home directory no matter the directory we are currently working in. We can once again confirm that we were successful as we look at the changed prompt where the `~` indicates our return to the home directory. 
 
 
 ![Image](cdpathfilee.png)
@@ -41,7 +41,7 @@ Here, I once again begin in the `lecture1` directory only now I give a path to a
 
 ![Image](catt.png)
 
-  Once again from the `lecture1` directory I use the `cat` command only with no aurgument this time. This then resulted in a completely blank line (no prompt) and repeated back my input until using ctrl + c. This happens because with no arguement after the command there is no file for it to return. So, nothing is returned initially as there is not file to print and whatever is typed after is simply repeated back because our commands were being typed into the `cat` command.
+  Once again from the `lecture1` directory I use the `cat` command only with no aurgument this time. This then resulted in a completely blank line (no prompt) and repeated back my input until using ctrl + c. This happens because with no arguement after the command there is no file for it to return. So, it does work, only nothing is returned initially as there is not file to print and whatever is typed after is simply repeated back because our commands were being typed into the `cat` command.
 
 
 ![Image](catpathdirectoryy.png)
