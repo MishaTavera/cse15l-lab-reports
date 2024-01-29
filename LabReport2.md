@@ -57,9 +57,12 @@ Below is the code for the web server 'ChatServer' that supports the appropriate 
 
 ![Image](image1LR2.png)
 
+Upon creating a server the image above is what appears prompting us to enter a message. 
 "https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com"
 
 ![Image](image2LR2.png)
+
+I add the message "hello" from myself as the user with the request '/add-message?s=hello&user=mish'. The complete link is located just below. 
 
 "https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=hello&user=mish"
 
