@@ -3,7 +3,7 @@
 ---
 
 ## Part 1
-    'import java.io.IOException;
+    import java.io.IOException;
     import java.net.URI;
 
     class Handler implements URLHandler {
@@ -50,7 +50,7 @@
 
         int port = Integer.parseInt(args[0]);
         Server.start(port, new Handler());
-    }}'
+    }}
 
 https://0-0-0-0-1526-25ieo6cbdsivmgee78jore2qpc.us.edusercontent.com/add-message?s=hello&user=mish
 https://0-0-0-0-1526-25ieo6cbdsivmgee78jore2qpc.us.edusercontent.com/add-message?s=yay&user=maya
