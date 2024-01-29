@@ -3,10 +3,10 @@
 ---
 
 ## Part 1
-'import java.io.IOException;
-import java.net.URI;
+    'import java.io.IOException;
+    import java.net.URI;
 
-class Handler implements URLHandler {
+    class Handler implements URLHandler {
     String messageString="";
 
     public String handleRequest(URI url) {
