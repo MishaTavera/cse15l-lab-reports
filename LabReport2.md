@@ -78,12 +78,12 @@ I add the message "hello" from myself as the user with the request '/add-message
 
 Absolute Path To The Private Key:
 
-![Image](image3LR2.png)
+![Image](privatekey.png)
 
 Absoulte Path To The Public Key:
 
-![Image](image3LR2.png)
+![Image](publickey.png)
 
 Password No Longer Required:
 
-![Image](image3LR2.png)
+![Image](nopassword.png)
