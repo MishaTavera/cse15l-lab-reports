@@ -74,3 +74,16 @@ I add the message "hello" from myself as the user with the request '/add-message
 
 "https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=finally&user=mish"
 
+## Part 2
+
+Absolute Path To The Private Key:
+
+![Image](image3LR2.png)
+
+Absoulte Path To The Public Key:
+
+![Image](image3LR2.png)
+
+Password No Longer Required:
+
+![Image](image3LR2.png)
