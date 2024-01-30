@@ -87,3 +87,7 @@ Absoulte Path To The Public Key:
 Password No Longer Required:
 
 ![Image](nopassword.png)
+
+## Part 3 
+
+In week 2 and 3 I learned and practiced how to build and run a server. This is all very new to me so I did not know the process of any of it. I learned how to run the serve in my EdStem workspace `javac`,`java` commands, and a port number. I did not know what this was either, but now to my understanding it identifies the port number that the server runs on which is apart of a URL. Along with this I also learned how to use paths/queries in URL's which made changes depending on the code!
