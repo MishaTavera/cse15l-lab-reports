@@ -1,8 +1,10 @@
 # Lab Report 2 
 ## Misha Tavera
 ---
-Below is the code for the web server 'ChatServer' that supports the appropriate paths and behaviors for Lab 2. 
+
 ## Part 1
+
+Below is the code for the web server 'ChatServer' that supports the appropriate paths and behaviors for Lab 2. 
 
     import java.io.IOException;
     import java.net.URI;
