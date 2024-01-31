@@ -79,7 +79,9 @@ I add the message `"yay"` from the user `"maya"` with the request `/add-message?
 Once again the method from my code that is called here is the `handleRequest` method. The argument here is the `URI url` instance. In this case `/add-message?s=yay&user=maya`. As this is run on the server following the previous message we added, the initial field value here has the last added message `"mish: hello /n"`. Then after running this path with the new value `"yay"` and new user `"maya"`, which looks like `maya: yay` this value is added to the field. This can be explained similarly to what I have mentioned here and that is that the path contains `add-message` and therefore the `user` and `message` are added to the value in `messageString`. That is, in the `messageString` value is now `"mish: hello"` and `"maya: yay"` separated by a new line as written in the code. Here, the `messageString` value is not necessariy changed as our previous message is still a value but more is added. In short, it does not alter previous messages but the `messageString` adds new messages as they are added. This can be explained by looking at our code, ` messageString += user + ": " + message + "\n";`. Everytime a new message from a user is added the `+=` adds the new message to what is already added/stored in `messageString`. This occured as well in our first example only it was not as clear as the new user message was added to the intially empty string value in `messageString`.
 
 Example of what the complete link looked like for reference. 
+
 "https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=yay&user=maya"
+
 
 ## Part 2
 
