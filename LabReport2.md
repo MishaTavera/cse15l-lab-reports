@@ -89,11 +89,11 @@ Example of what the complete link looked like for reference.
 
 Absolute Path To The Private Key:
 
-![Image](privatekey.png)
+![Image](PrivateKey.png)
 
 Absoulte Path To The Public Key:
 
-![Image](publickey.png)
+![Image](PublicKey.png)
 
 Password No Longer Required:
 
