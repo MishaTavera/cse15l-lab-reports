@@ -67,29 +67,27 @@ Upon creating a server the image above is what appears prompting us to enter a m
 
 I add the message "hello" from myself as the user with the request `/add-message?s=hello&user=mish`. The complete link is located just below. 
 
-Here, I use the `handleRequest` method. The relevant argument is `URI url` which represents an instance of a `URI`. When we use `/add-message?s=hello&user=mish` I am providing and instance of a `URI`. The method then uses this information, which follows the format as constructed in the code, to update our relevant field `messageString`. This string in this instance is initially set to be an empty string. After running the path that contains "/add-message" with query parameters "s=hello" and "user=mish" the field `messageString` is accordingly updated. The value of `messageString` is now updated to the value "hello" appended to "mish: "which is printed as shown above after the user's name. 
+Here, the method in my code that is called is the `handleRequest` method. The relevant argument is `URI url` which represents an instance of a `URI`. When we use `/add-message?s=hello&user=mish` I am providing and instance of a `URI`. The method then uses this information, which follows the format as constructed in the code, to update our relevant field `messageString`. This string in this instance is initially set to be an empty string. After running the path that contains "/add-message" with query parameters `s=hello` and `user=mish` the field `messageString` is accordingly updated. This can be explained by following the code above, specifically, `else if (url.getPath().contains("/add-message"))`. As our request contains this `/add-message` the `message` and `user` are taken and then added to `messageString` and concatenated in this specific format. The value of `messageString` is now updated to the value `hello` appended to `mish: ` (i.e. "mish: hello" followed by a new line) which is printed as shown above after the user's name. 
 
 Example of what the complete link looked like for reference: 
-"https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=hello&user=mish"
+`https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=hello&user=mish`
 
 ![Image](image3LR2.png)
 
-I add the message "yay" from the user "maya" with the request `/add-message?s=yay&user=maya`. The complete link for this is also shown below.
+I add the message `yay` from the user `maya` with the request `/add-message?s=yay&user=maya`. The complete link for this is also shown below.
 
-I once again use the `handleRequest` method. The argument here is the `URI url` instance. In this case `/add-message?s=yay&user=maya`. As this is run on the server following the previous message we added the initial field value here has the last added message "mish: hello". Then after running this path with the new value "yay" and new user this value is added to the field. That is in the `messageString` value is now "mish: hello" and "maya: yay" separated by a new line as written in the code. Here, the `messageString` value is not necessariy changed as our previous message is still a value but more is added. In short, it does not alter previous messages but the `messageString` changes as new messages are added. This can be explained by looking at our code, ` messageString += user + ": " + message + "\n";`. Everytime a new message from a user is added the `+=` adds the new message to what is already added/stored in `messageString`. 
+Once again the method from my code that is called here is the `handleRequest` method. The argument here is the `URI url` instance. In this case `/add-message?s=yay&user=maya`. As this is run on the server following the previous message we added, the initial field value here has the last added message `mish: hello /n`. Then after running this path with the new value `yay` and new user `maya`, which looks like `maya: yay` this value is added to the field. This can be explained similarly to what I have mentioned here and that is that the path contains `add-message` and therefore the `user` and `message` are added to the value in `messageString`. That is, in the `messageString` value is now "mish: hello" and "maya: yay" separated by a new line as written in the code. Here, the `messageString` value is not necessariy changed as our previous message is still a value but more is added. In short, it does not alter previous messages but the `messageString` adds new messages as they are added. This can be explained by looking at our code, ` messageString += user + ": " + message + "\n";`. Everytime a new message from a user is added the `+=` adds the new message to what is already added/stored in `messageString`. This occured as well in our first example only it was not as clear as the new user message was added to the intially empty string value in `messageString`.
 
 Example of what the complete link looked like for reference. 
 "https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=yay&user=maya"
-
-![Image](image4LR2.png)
-
-"https://0-0-0-0-1551-7ospflere607e0lv1591qpk9ok.us.edusercontent.com/add-message?s=finally&user=mish"
 
 ## Part 2
 
 Absolute Path To The Private Key:
 
 ![Image](PrivateKey.png)
+
+Here, I am using the ls command followed by 
 
 Absoulte Path To The Public Key:
 
