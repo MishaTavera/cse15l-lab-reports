@@ -8,6 +8,7 @@ Failure-Inducing Input:
 
 
 ![failed](.jpg)
+ 
   ` @Test
     public void testAverageWithoutLowestMultiRepeat(){
     double [] input1= {1,1,1,2,3,4};
