@@ -16,6 +16,27 @@ Failure-Inducing Input:
  }
 ```
 
+Passing Tests:
+```
+   @Test
+  public void testAverageWithoutLowest3(){
+    double [] input1= {1};
+    assertEquals(0,ArrayExamples.averageWithoutLowest(input1),0.0001);
+  }
+   @Test
+  public void testAverageWithoutLowest4(){
+    double [] input1= {1,2};
+    assertEquals(2,ArrayExamples.averageWithoutLowest(input1),0.0001);
+  }
+     @Test
+  public void testAverageWithoutLowest5(){
+    double [] input1= {1.0,2.0,3.0};
+    assertEquals(2.5,ArrayExamples.averageWithoutLowest(input1),0.0001);
+  }
+```
+
+
+
 Provide:
 
 
