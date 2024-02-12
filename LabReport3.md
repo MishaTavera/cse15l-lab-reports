@@ -6,8 +6,6 @@
 
 ### Failure-Inducing Input:
 
-
-![failed](.jpg)
 ``` 
    @Test
     public void testAverageWithoutLowestMultiRepeat(){
@@ -51,6 +49,8 @@
     return sum / (arr.length - 1);
   }
 ````
+![failed](failure-inducing.jpg)
+![firstpassed](passedTests.jpg)
 
 ### After Code: 
 
