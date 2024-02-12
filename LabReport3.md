@@ -49,8 +49,8 @@
     return sum / (arr.length - 1);
   }
 ````
-![failed](failure-inducing.jpg)
-![firstpassed](passedTests.jpg)
+![failed](failure-inducing.png)
+![firstpassed](passedTests.png)
 
 ### After Code: 
 
