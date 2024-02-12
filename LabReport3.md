@@ -51,7 +51,7 @@
 ````
 ![failed](failure-inducing.png)
 
-![firstpassed](success.png)
+![firstpassed](passedTests.png)
 
 ### After Code: 
 
