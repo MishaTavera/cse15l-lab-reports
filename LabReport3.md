@@ -8,13 +8,13 @@ Failure-Inducing Input:
 
 
 ![failed](.jpg)
- 
- `  @Test`
-  `  public void testAverageWithoutLowestMultiRepeat(){`
-   ` double [] input1= {1,1,1,2,3,4};`
-   ` assertEquals(2.2,ArrayExamples.averageWithoutLowest(input1),0.0001);`
- `}`
-
+``` 
+   @Test
+    public void testAverageWithoutLowestMultiRepeat(){
+    double [] input1= {1,1,1,2,3,4};
+    assertEquals(2.2,ArrayExamples.averageWithoutLowest(input1),0.0001);
+ }
+```
 
 Provide:
 
