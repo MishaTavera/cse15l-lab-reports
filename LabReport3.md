@@ -1,5 +1,4 @@
-##LabReport3 
+# LabReport 3
+## Misha Tavera
 
-#Misha Tavera
-
-----
+--- 
