@@ -65,7 +65,7 @@ As we can see all of these tests passed. It took me a little while to identify t
 
 With this test I found that the program did not produce the correct output for calculating the average. The symptom/output of the failed test case gave me an idea of a potential flaw in the method. Comparing my expected output to the actual output helped me to confirm the bug in the method was indeed because the method excluded all instances of the lowest number in the calculation for the average of the array. I was able to confirm this because with the relatively simple numbers I decided to calculate the average of this array `{1,1,1,2,3,4}` excluding all of the lowest values `1` and I calculated `1.8`, the same output of the method. Taking this information I had identified the error in the method `averageWithoutLowest`, which as mentioned before was that it did not handle the case of multiple instances of the lowest value in the array and instead excluded all instances of them. To change the code to handle these cases I modified the code:
 
-Once again the original code with bug:                          
+#### Once again the original code with bug:                          
 ```
    // Averages the numbers in the array (takes the mean), but leaves out the
   // lowest number when calculating. Returns 0 if there are no elements or just
@@ -83,7 +83,7 @@ Once again the original code with bug:
     return sum / (arr.length - 1);
   }
 ````
-The code after my modifications to address the bug: 
+#### The code after my modifications to address the bug: 
  ```
   static double averageWithoutLowest(double[] arr) {
     if(arr.length < 2) { return 0.0; }
