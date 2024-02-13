@@ -39,8 +39,6 @@
 
 ### After Code: 
 
-
-Provide:
 The focus of this lab (week 4) was practicing writing test cases leading to the discovery of bugs in the program through catching symptoms in the test cases. I will walk through this process using the method `averageWithoutLowest` from the program. The original piece of code for this method was as follows: 
 
 ### Before Code: 
@@ -100,8 +98,46 @@ As we can see all of these tests passed. It took me a little while to identify t
 
 ![failed](failure-inducing.png)
 
-With this test I found that the program did not produce the correct output for calculating the average. The symptom/output of the failed test case gave me an idea of a potential flaw in the method. 
+With this test I found that the program did not produce the correct output for calculating the average. The symptom/output of the failed test case gave me an idea of a potential flaw in the method. Comparing my expected output to the actual output helped me to confirm the bug in the method was indeed because the method excluded all instances of the lowest number in the calculation for the average of the array. I was able to confirm this because with the relatively simple numbers I decided to calculate the average of this array `{1,1,1,2,3,4}` excluding all of the lowest values `1` and I calculated `1.8`, the same output of the method. Taking this information I had identified the error in the method `averageWithoutLowest`, which as mentioned before was that it did not handle the case of multiple instances of the lowest value in the array and instead excluded all instances of them. To change the code to handle these cases I modified the code:
 
+Once again the original code with bug:                          
+```
+   // Averages the numbers in the array (takes the mean), but leaves out the
+  // lowest number when calculating. Returns 0 if there are no elements or just
+  // 1 element in the array
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+````
+The code after my modifications to address the bug: 
+ ```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+  
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num >= lowest) 
+      { sum += num;}
+    }
+    return (sum-lowest) / (arr.length - 1);
+  }
+```
+I modified the code to add all instances of the lowest number to the overall value `sum` and returned the sum minus one instance of `lowest` over the number of values in the string, excluding one instance of the `lowest`, to achieve the inteded average of the array. After doing so, I re-ran the test case again and recieved the following: 
+
+![alltestspassed](allTestsPassed.png)
 
 A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
