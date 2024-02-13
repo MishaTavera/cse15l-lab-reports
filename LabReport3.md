@@ -4,41 +4,6 @@
 --- 
 ## Part 1: Bugs
 
-#### Failure-Inducing Input:
-
-``` 
-   @Test
-    public void testAverageWithoutLowestMultiRepeat(){
-    double [] input1= {1,1,1,2,3,4};
-    assertEquals(2.2,ArrayExamples.averageWithoutLowest(input1),0.0001);
- }
-```
-
-#### Passing Tests:
-```
-   @Test
-  public void testAverageWithoutLowest3(){
-    double [] input1= {1};
-    assertEquals(0,ArrayExamples.averageWithoutLowest(input1),0.0001);
-  }
-   @Test
-  public void testAverageWithoutLowest4(){
-    double [] input1= {1,2};
-    assertEquals(2,ArrayExamples.averageWithoutLowest(input1),0.0001);
-  }
-     @Test
-  public void testAverageWithoutLowest5(){
-    double [] input1= {1.0,2.0,3.0};
-    assertEquals(2.5,ArrayExamples.averageWithoutLowest(input1),0.0001);
-  }
-```
-
-
-
-
-
-#### After Code: 
-
 The focus of this lab (week 4) was practicing writing test cases leading to the discovery of bugs in the program through catching symptoms in the test cases. I will walk through this process using the method `averageWithoutLowest` from the program. The original piece of code for this method was as follows: 
 
 #### Before Code: 
