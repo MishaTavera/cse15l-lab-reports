@@ -308,7 +308,7 @@ Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f -user mishacue
 ./technical/911report/chapter-12.txt
 
 ```
-Here I combine all the options we just learned. I end up with a `find` command that searches `./technical` for file types owned by user `mishacueva` at a directory depth of 2 that exceed the size of `200` kilobytes. The files that meet this search are shown in the output after running the command. All of these can be used in a various combination of ways specific to what you are looking for!
+Here I combine all the options we just learned. I end up with a `find` command that searches `./technical` for file types owned by user `mishacueva` at a directory depth of 2 that exceed the size of `100` kilobytes. The files that meet this search are shown in the output after running the command. All of these can be used in a various combination of ways specific to what you are looking for!
 
 #### Sources:
 
