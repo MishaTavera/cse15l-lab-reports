@@ -4,7 +4,7 @@
 --- 
 ## Part 1: Bugs
 
-### Failure-Inducing Input:
+#### Failure-Inducing Input:
 
 ``` 
    @Test
@@ -14,7 +14,7 @@
  }
 ```
 
-### Passing Tests:
+#### Passing Tests:
 ```
    @Test
   public void testAverageWithoutLowest3(){
@@ -37,11 +37,11 @@
 
 
 
-### After Code: 
+#### After Code: 
 
 The focus of this lab (week 4) was practicing writing test cases leading to the discovery of bugs in the program through catching symptoms in the test cases. I will walk through this process using the method `averageWithoutLowest` from the program. The original piece of code for this method was as follows: 
 
-### Before Code: 
+#### Before Code: 
 ```
    // Averages the numbers in the array (takes the mean), but leaves out the
   // lowest number when calculating. Returns 0 if there are no elements or just
@@ -63,7 +63,7 @@ The focus of this lab (week 4) was practicing writing test cases leading to the 
 In the original code block there is a brief description of what the method should do, which is to average numbers in an array leaving out the lowest number. I started by running several tests such as the ones below: 
 
 
-### Passing Tests:
+#### Passing Tests:
 ```
    @Test
   public void testAverageWithoutLowest3(){
@@ -85,7 +85,7 @@ In the original code block there is a brief description of what the method shoul
 
 As we can see all of these tests passed. It took me a little while to identify the bug in this program as it had passed several tests. I eventually realized I had not considered the possibility of multiple instances of the lowest value to appear in the array. So, I wrote the test case: 
 
-### Failure-Inducing Input:
+#### Failure-Inducing Input:
 
 ``` 
    @Test
@@ -139,10 +139,8 @@ I modified the code to add all instances of the lowest number to the overall val
 
 ![alltestspassed](allTestsPassed.png)
 
-A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
-The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+As we can see from the image above the final test passed meaning a successful fix of the bug. To be thourough I tested with several more examples of these cases and can confirm those passed as well. 
+
 
 
 ## Part 2: Researching Commands
