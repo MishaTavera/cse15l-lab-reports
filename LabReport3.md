@@ -145,3 +145,175 @@ As we can see from the image above the final test passed meaning a successful fi
 
 ## Part 2: Researching Commands
 
+In week 5 lab we focused on a few commands, specifically `less` , `find`, and `grep`. We practiced using these commands to to do a variety of things relating to our directiories and files from `./technical`, such as counting the number of words of a file, the number of characters, looking for specific strings, etc. We utilized a few of the many command-line options of these commands and I continued to explore some more. I have focused on the `find` command and here are some interesting/usful command-line options I found: 
+
+
+#### Command-Line Option: `-type`
+
+When using the `find` command the `-type` command-line option can be very useful in specifying the type of files that you intend to look for. It can help specify your search to files or directories. I demonstrate below how to use these commands in examples from `./technical` which we used in week 5 lab.
+
+Directory Use:
+`-type d`
+
+This specific command-line option will find directories hence the `-d`. In the example below the whole command I used is `find ./technical -type d`. The output of this command, also shown below, is the list of directory paths in the within the directory `./technical`. 
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type d
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+./technical/plos
+./technical/biomed
+./technical/911report
+```
+File Use:
+`-type f` 
+
+With similar logic as the `-type d` example we have seen just above the `-type f` command is essentially the same only `f` will find files. In the example below the command I use is `find ./technical -type f | head -n 5`. The output of this command is the list of file paths in the current directory. Note `|head -n 5` is used to shorten the extensive list of paths to files in `./technical`. We have examples of this before in lectures/lab but to briefly summarize, this command option for `find` only prints the first number of files that you specify. In this case we have the `5`, so it is printing only the first 5 paths to files in `.technical`. 
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f | head -n 5
+./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
+./technical/government/About_LSC/Progress_report.txt
+./technical/government/About_LSC/Strategic_report.txt
+./technical/government/About_LSC/Comments_on_semiannual.txt
+./technical/government/About_LSC/Special_report_to_congress.txt
+
+```
+
+
+#### Command-Line Option: `-user`
+
+This options `-user` followed by the name of a specified user searches for files/directories owned by the user specified. This can be useful perhaps on shared projects to find your own or another persons files/directories. To show how to use this option of `find` I once again use `./technical` from week 5. 
+
+Directory Use: 
+Below I use the command line `find ./technical -type d -user mishacueva |head -n 5`. I use the command that we just seen `-type d` to find only directories owned my specific user `mishacueva`. The output here is the paths to only directories in `./technical` that are owed by myself. 
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type d -user mishacueva |h
+ead -n 5
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+```
+File Use: 
+Similarly here, I use the same command line only this type searching for `-type f` paths in `./technical` owned my `mishacueva`.
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f -user mishacueva | head -n 5
+./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
+./technical/government/About_LSC/Progress_report.txt
+./technical/government/About_LSC/Strategic_report.txt
+./technical/government/About_LSC/Comments_on_semiannual.txt
+./technical/government/About_LSC/Special_report_to_congress.txt
+```
+The combination of these three options, `-type` , `-user`, and `-n`,  for `find` command are very useful together here as it shortens the length of the output significantly. The `-user` option would work on its own however, I use this combination to demonstrate its abilities for files/directories and to have a manageable output for the purpose of the example. 
+
+#### Command-Line Option: `-maxdepth`/`-mindepth`
+
+The two options for `find`,   `-maxdepth` and `-mindepth`, are useful in that they limit the depth at which the search explores, specifically the depth of directories. I feel that this would help for particularly large projects when directory depth can get to be large as it specifies to up to what point (or to what minimum) that you want your search to cover. I have included both options here because I feel that they are rather similar in purpose. As the name of the options indicate `-maxdepth` followed by a specific number specifies the maximum limit the depth of command `find`. On the other hand, `-mindepth` followed by a number sets the minimum depth at which the `find` command must meet. Below I give an example of the `-maxdepth` option. 
+
+Directory Use: 
+
+Here, I use the `find` command along with option `-maxdepth 1` to indicate that I want my search to limit the depth of directory search to only `1`. Paired with the `-type d` option, in this command I am only searching for the directory types to the limit of one directory in `./technical` ( I also use `|head -n 5` to limit the output to only the first 5 lines).
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type d -maxdepth 1 |head -n 5
+./technical
+./technical/government
+./technical/plos
+./technical/biomed
+./technical/911report
+```
+
+File Use:
+
+Here, I once again use `-maxdepth` to limit my search only this time I incate a limit of directory depth `3`. In this example I also use the `-type f` command to demonstrate its use for file searching. Below file types are searched for at a limit of directory depth `3`, so this command also works for file searching. I have also limited the output once again to only `5` lines as seen in the command line and in the output. 
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f -maxdepth 3 |head -
+n 5
+./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
+./technical/government/About_LSC/Progress_report.txt
+./technical/government/About_LSC/Strategic_report.txt
+./technical/government/About_LSC/Comments_on_semiannual.txt
+./technical/government/About_LSC/Special_report_to_congress.txt
+```
+
+#### Command-Line Option: `-size`
+
+The `find` command option `-size` followed by a specific size will perform a search based on the size inciated in the command line and it is useful for just that reason. Having a size included in your search can more specifically narrow your search and can catch perhaps specific files your are looking for that are particularly large or small, whatever the size is that you are searching for. There are various suffixs for searching for a specific size such as `k` for kilobytes , `M` for megabytes, and so on (a more detailed list of these can be found in the link of sources at the end). In the examples below I use the `k` suffix, which looks like:
+
+Directory Use: 
+
+I use the specific `-size` search of `-100k`, breaking this down the `-` eseentially means less than and the `100k` is referencing the size 100 kilobytes. In short, the command is searching for the size of directories in `./technical` , which is specifice below with `-type d`, that are less than `100` kilobytes. The output is the directories that meet such search criteria. 
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type d -size -100k
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+./technical/plos
+./technical/biomed
+./technical/911report
+```
+File Use: 
+
+Below I use the `find` command option `-size` once again to search narrow my search down, this time I use `-size +150k` which in other words is searching for what exeeds the size of `150` kilobytes (the `+` representing the sizes greater than `150k`). This time I also specify my search to `-type f` to search for files that meet this size specification. Correspondinly the output is paths to files that meet this criteria. 
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f -size +150k
+./technical/government/About_LSC/commission_report.txt
+./technical/government/Env_Prot_Agen/multi102902.txt
+./technical/government/Env_Prot_Agen/bill.txt
+./technical/government/Env_Prot_Agen/tech_adden.txt
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+./technical/government/Gen_Account_Office/pe1019.txt
+./technical/government/Gen_Account_Office/d01591sp.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-3.txt
+
+```
+
+#### Takeaway: 
+
+This various command-line options for the `find` command are VERY useful to navigate through directories and files especially of large work spaces. There are also many more options for the `find` command than those that I have used in this report that would also be useful and worth looking over. With that said, something to take away is that the combination of these various options will aid in even more specific results. We have combined a few already in the above examples but to further emphasize the level of use of these options I provide another example below: 
+
+Combination of `-type`, `-user`, `-maxdepth`, `-size`: 
+
+```
+Mishas-MacBook-Air:docsearch mishacueva$ find ./technical -type f -user mishacueva -maxdepth 2 -size +100k
+./technical/biomed/1471-2105-3-2.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-12.txt
+
+```
+Here I combine all the options we just learned. I end up with a `find` command that searches `./technical` for file types owned by user `mishacueva` at a directory depth of 2 that exceed the size of `200` kilobytes. The files that meet this search are shown in the output after running the command. All of these can be used in a various combination of ways specific to what you are looking for!
+
+#### Sources:
+
+https://ss64.com/bash/find.html
+
+https://tecadmin.net/linux-find-command-with-examples/
+
+
