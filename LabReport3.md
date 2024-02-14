@@ -283,6 +283,8 @@ Here I combine all the options we just learned. I end up with a `find` command t
 
 #### Sources:
 
+Throughout Part 2 of this lab report I used a combination of the following two sources below:
+
 https://ss64.com/bash/find.html
 
 https://tecadmin.net/linux-find-command-with-examples/
