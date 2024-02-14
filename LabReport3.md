@@ -27,7 +27,6 @@ The focus of this lab (week 4) was practicing writing test cases leading to the 
 
 In the original code block there is a brief description of what the method should do, which is to average numbers in an array leaving out the lowest number. I started by running several tests such as the ones below: 
 
-
 #### Passing Tests:
 ```
    @Test
@@ -46,7 +45,7 @@ In the original code block there is a brief description of what the method shoul
     assertEquals(2.5,ArrayExamples.averageWithoutLowest(input1),0.0001);
   }
 ```
-![firstpassed](passedTests.png)
+![firstpassed](firstTestsPassed.png)
 
 As we can see all of these tests passed. It took me a little while to identify the bug in this program as it had passed several tests. I eventually realized I had not considered the possibility of multiple instances of the lowest value to appear in the array. So, I wrote the test case: 
 
@@ -56,14 +55,14 @@ As we can see all of these tests passed. It took me a little while to identify t
    @Test
     public void testAverageWithoutLowestMultiRepeat(){
     double [] input1= {1,1,1,2,3,4};
-    assertEquals(2.2,ArrayExamples.averageWithoutLowest(input1),0.0001);
+    assertEquals(3.0,ArrayExamples.averageWithoutLowest(input1),0.0001);
  }
 ```
 
 
-![failed](failure-inducing.png)
+![failed](oneFailure.png)
 
-With this test I found that the program did not produce the correct output for calculating the average. The symptom/output of the failed test case gave me an idea of a potential flaw in the method. Comparing my expected output to the actual output helped me to confirm the bug in the method was indeed because the method excluded all instances of the lowest number in the calculation for the average of the array. I was able to confirm this because with the relatively simple numbers I decided to calculate the average of this array `{1,1,1,2,3,4}` excluding all of the lowest values `1` and I calculated `1.8`, the same output of the method. Taking this information I had identified the error in the method `averageWithoutLowest`, which as mentioned before was that it did not handle the case of multiple instances of the lowest value in the array and instead excluded all instances of them. To change the code to handle these cases I modified the code:
+With this test I found that the program did not produce the correct output for calculating the average. The symptom/output of the failed test case gave me an idea of a potential flaw in the method. Comparing my expected output to the actual output helped me to confirm the bug in the method was indeed because the method is written to return `sum /(arr.length - 1)`, meaning in calculating the average it only returns the length of the array minus 1. But in the case that there are multiple instances of the lowest value in the array the method should be able to exlude all instances from being in the calculation. I was able to confirm this because with the relatively simple numbers I decided to calculate the average of this array `{1,1,1,2,3,4}` following the original code I got the the calculation for average was the sum of the non lowest values (2+3+4=9) over the length of the array minus 1 (5). So it returned `9/5` giving us the output `1.8`, the same output of the method we got running our failed Junit test. Taking this information I had identified the error in the method `averageWithoutLowest`, which as mentioned before was that it did not handle the case of multiple instances of the lowest value in the array and was incapable of caluclating our expected average for failure to consider that more than one instance in the array would need to be excluded for the calculation in cases like these. To change the code to handle these cases I modified the code:
 
 #### Once again the original code with bug:                          
 ```
@@ -84,25 +83,28 @@ With this test I found that the program did not produce the correct output for c
   }
 ````
 #### The code after my modifications to address the bug: 
- ```
+```
   static double averageWithoutLowest(double[] arr) {
     if(arr.length < 2) { return 0.0; }
     double lowest = arr[0];
-  
     for(double num: arr) {
       if(num < lowest) { lowest = num; }
     }
+    double lowcount = 0;
     double sum = 0;
     for(double num: arr) {
-      if(num >= lowest) 
-      { sum += num;}
+      if(num != lowest)
+         { sum += num; }
+      else if (num == lowest){   
+        lowcount +=1;
     }
-    return (sum-lowest) / (arr.length - 1);
+  }
+    return sum / (arr.length - lowcount);
   }
 ```
-I modified the code to add all instances of the lowest number to the overall value `sum` and returned the sum minus one instance of `lowest` over the number of values in the string, excluding one instance of the `lowest`, to achieve the inteded average of the array. After doing so, I re-ran the test case again and recieved the following: 
+I modified the code subtract all instances of the lowest number to the overall value that is dividing sum in out return. If the `num` in the array is equal to the value of `lowest` then the new variable `lowcount` is incremented accordingly. Then to the return statement rather than simly subtracting `-1` from the aray length to accomodate all test cases it now instead subtracts the number of times the `lowest` value appears in the array (`lowcount`).  After doing so, I re-ran the test case again and recieved the following: 
 
-![alltestspassed](allTestsPassed.png)
+![alltestspassed](fixedBugNewOutput.png)
 
 As we can see from the image above the final test passed meaning a successful fix of the bug. To be thourough I tested with several more examples of these cases and can confirm those passed as well. 
 
