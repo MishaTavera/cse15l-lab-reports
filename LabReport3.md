@@ -102,7 +102,7 @@ With this test I found that the program did not produce the correct output for c
     return sum / (arr.length - lowcount);
   }
 ```
-I modified the code subtract all instances of the lowest number to the overall value, that is, dividing sum in our return by the correct formula for excluding the `lowest` values from any of the calculation. Much of the code remains similar to the original, only now if the `num` in the array is equal to the value of `lowest` then the new variable `lowcount` is incremented accordingly. Then to the return statement rather than simly subtracting `-1` from the aray length to accomodate all test cases it now instead subtracts the number of times the `lowest` value appears in the array (`lowcount`).  After doing so, I re-ran the test case again and recieved the following: 
+I modified the code subtract all instances of the lowest number to the overall value, that is, dividing sum in our return by the correct formula for excluding the `lowest` values from any of the calculation. Much of the code remains similar to the original, only now if the `num` in the array is equal to the value of `lowest` then the new variable `lowcount` is incremented accordingly. Then to the return statement rather than simly subtracting `-1` from the array length to accomodate all test cases it now instead subtracts the number of times the `lowest` value appears in the array (`lowcount`).  After doing so, I re-ran the test case again and recieved the following: 
 
 ![alltestspassed](fixedBugNewOutput.png)
 
