@@ -6,6 +6,8 @@
 ### Our Task
 
   In the lab we had a code file that contained an error, our task was to edit the code using `vim`. It was only a small error but the focus here was to practice and get familiar with some elements of `vim` and how it can make editing a code file quite simple and fast all from the command line. We were encouraged to go first with our immediate guess to approach the edit based on some basic information we had from lectures/lab. Then, using some provided tips and resources we retry to make the edit with the intention of fewer keystrokes or in a faster manner. 
+
+
 ----
 #### First-Try:
 
