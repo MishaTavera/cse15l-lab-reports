@@ -19,7 +19,7 @@ Going into it my first initial way of going about it was to use `vim` to pull up
 
 All in all it was quite a lengthy way of going about it, taking me about [insert time] to go about it. After some research into different ways to help speed the process I succeeded in a more efficient solution to completing this task. Resetting and starting fresh I took a new route and this time I was able to complete the task in [insert time]. The imaes below show just each step that I went through. 
 
-----
+
 #### Final Solution:
 
 
@@ -27,5 +27,5 @@ All in all it was quite a lengthy way of going about it, taking me about [insert
 Once again keeping track of my keystrokes the tips I found the total keystrokes to complete this looked like: 
 
 
-----
+
 As we can see from the time an the keystrokes it was a more efficient way of making this edit to the text code. In this case, it was on a very small scale edit so perhaps there is not much of a significant change. However, utilizing these functions of `vim` on a larger project would lead to many instances of faster editing overall increasing efficiency and simplicity of making edits and all from the command line.
