@@ -72,6 +72,6 @@ As we can see from the time an the keystrokes it was a more efficient way of mak
 ---
 Sites I used:
 
-https://vim.rtorr.com
+(https://vim.rtorr.com)
 
-https://www.redhat.com/sysadmin/shortcuts-command-line-navigation
+(https://www.redhat.com/sysadmin/shortcuts-command-line-navigation)
