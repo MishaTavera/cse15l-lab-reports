@@ -37,7 +37,7 @@ All in all it was quite a lengthy way of going about it, taking me a time of 2:4
 
 2. Cloning fork from Repository:
 
-![step 2](gitCloneSSH.png)]
+![step 2](gitCloneSSH1.png)]
 
 `g,i,t, c,l,o,n,e, <command> v,<enter>` (clone fork of repository ussing SSH URL, which I already had copied to clipboard),
 
