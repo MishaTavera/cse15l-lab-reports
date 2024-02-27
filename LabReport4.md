@@ -68,3 +68,8 @@ checking for bugs)
 Now that the code is fixed I commit and push my changes to the repository with `g,i,t,<space>,a,d,d,<space>,.,;,g,i,t,<space>,c,o,m,m,i,t,<space>,-,m,<space>,",m,e,s,s,a,g,e,",;,g,i,t,<space>,p,u,s,h,<space>,o,r,i,g,i,n, <space>,m,a,i,n,<enter> `(all in one command line). 
 
 As we can see from the time an the keystrokes it was a more efficient way of making this edit to the text code. In this case, it was on a very small scale edit so perhaps there is not much of a significant change. However, utilizing these functions of `vim`, and other keyboard shortcuts in general, on a larger project would lead to many instances of faster editing overall increasing efficiency and simplicity of making edits and all from the command line.
+
+---
+Sites I used:
+https://vim.rtorr.com
+https://www.redhat.com/sysadmin/shortcuts-command-line-navigation
