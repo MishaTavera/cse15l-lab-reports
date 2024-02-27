@@ -1,7 +1,7 @@
 # Lab Report 4
 ## Misha Tavera
 ----- 
-  In this weeks lab we focused on using `vim` to develop our skills and eficiency in editing any program. We essentially doing this by using `vim` and it's command-line function of diirectly making edits to a piece of code from the command line. To summarize, `vim` has two modes, normal mode and insert mode. The insert mode essentially allows you to make the edit to the code by typing in any changes, while in the normal mode all keys have some kind of function that help you navigate through any text of code effciently. In this normal mode, there is a long list of what each key can do but for this lab we only used some of the many which I explain below. 
+  In this weeks lab we focused on using `vim` to develop our skills and efficiency in editing any program. We used `vim` and it's command-line function of directly making edits to a piece of code from the command line. To summarize, `vim` has two modes, normal mode and insert mode. The insert mode essentially allows you to make the edit to the code by typing in any changes, while in the normal mode all keys have some kind of function that help you navigate through any text of code effciently. In this normal mode, there is a long list of what each key can do but for this lab we only used some of the many which I explain below. 
 
 ### Our Task
 
@@ -24,7 +24,7 @@ Going into it my first initial way of going about it was to use `vim` to pull up
 
 ----
 
-All in all it was quite a lengthy way of going about it, taking me a time of 2:49 to go about it. After some research into different ways to help speed the process I succeeded in a more efficient solution to completing this task. Resetting and starting fresh I took a new route and this time I was able to complete the task in 2:06. The images below show just each step that I went through. 
+All in all it was quite a lengthy way of going about it, taking me a time of 2:49 to complete. After some research into different ways to help speed the process I succeeded in a more efficient solution to completing this task. Resetting and starting fresh I took a new route and this time I was able to complete the task in 2:06. The images below show just each step that I went through. 
 
 
 #### Final Solution:
@@ -72,4 +72,5 @@ As we can see from the time an the keystrokes it was a more efficient way of mak
 ---
 Sites I used:
 https://vim.rtorr.com
+
 https://www.redhat.com/sysadmin/shortcuts-command-line-navigation
