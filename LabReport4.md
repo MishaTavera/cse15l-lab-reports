@@ -50,20 +50,20 @@ checking for bugs)
 
 4. Editing code:
 
-![step 4](openVim.jpg)]
-![step 4](newEdit.jpg)]
+![step 4](openVim.png)]
+![step 4](newEdit.png)]
 
 `v,i,m, <space>, L, <tab>, ., j,a,v,a,<enter>`(to open the code file to start making an edit to the error)Using my keypad I scrolled down to near line 44 then used `j,j` ,to land on 44 which had the error.`e` (to jump to  the end of the first word) ,`r` (to replace a single character), `2` (the necessary edit), `<esc> `, `:,w,q, <enter> ` to save and quit.
 
 5. Rerun Tests
 
-![step 5](rerunTests.jpg)]
+![step 5](rerunTests.png)]
 
 `b,a,s,h, <space>, t, <tab>, <enter>`(to check that the tests now run properly).
 
 6. Commit and Push Changes:
 
-![step 6](commitPush.jpg)]
+![step 6](commitPush.png)]
 
 Now that the code is fixed I commit and push my changes to the repository with `g,i,t,<space>,a,d,d,<space>,.,;,g,i,t,<space>,c,o,m,m,i,t,<space>,-,m,<space>,",m,e,s,s,a,g,e,",;,g,i,t,<space>,p,u,s,h,<space>,o,r,i,g,i,n, <space>,m,a,i,n,<enter> `(all in one command line). 
 
