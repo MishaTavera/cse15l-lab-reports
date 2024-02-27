@@ -20,7 +20,7 @@ We are given these steps to complete:
 
 Going into it my first initial way of going about it was to use `vim` to pull up the code file with the error and (in normal mode) use the 'j' key repeatedly to find the line I was looking for. Then I used the `l` to move my cursor to the right character by character. Using the `i` key to change to insert mode I used `<backspace>` and then typed the my intended change accordingly. What that looked like exactly in keystrokes is: 
 
-`m,t,a,v,e,r,a,@,i,e,n,g,6,.,u,c,s,d,.,e,d,u,<enter>,`(log into ieng6), `c,d,<space>,c,s,e,1,5,l, -,l, a,b,7,<enter>`(to enter the correct directory)  `g,i,t, c,l,o,n,e, <command> v,<enter>` (clone fork of repository ussing SSH URL, which I already had copied to clipboard), `b,a,s,h, <space>, t,e,s,t,.,s,h,<enter>`(running the tests to find failures) `v,i,m, L,i,s,t,E,x,a,m,p,l,e,s,.,j,a,v,a,<enter>` (opening the code file using vim) `j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, l, l, l, l, l, l, l, l, l, l, l, l, i,<backspace>,2 `(to make the change ``1`` to ``2`` after `index`)`, <esc>, :,w,q, <enter>` (editing the code file to fix the failing test), `b,a,s,h, <space>, t,e,s,t,.,s,h,<enter>` (to check all tests now pass) and finally` g,i,t, <space>, a,d,d,<space>, .,<enter>, g,i,t, <space> , c,o,m,m,i,t, <space> , -, m, <space> , MESSAGE,<enter>, g,i,t , <space> ,o,r,i,g,i,n, <space> ,m,a,i,n, <enter>` to commit and push all changes to the repository. 
+`m,t,a,v,e,r,a,@,i,e,n,g,6,.,u,c,s,d,.,e,d,u,<enter>,`(log into ieng6),`g,i,t, c,l,o,n,e, <command> v,<enter>` (clone fork of repository ussing SSH URL, which I already had copied to clipboard),  `c,d,<space>,c,s,e,1,5,l, -,l, a,b,7,<enter>`(to enter the correct directory)  `b,a,s,h, <space>, t,e,s,t,.,s,h,<enter>`(running the tests to find failures) `v,i,m, L,i,s,t,E,x,a,m,p,l,e,s,.,j,a,v,a,<enter>` (opening the code file using vim) `j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, j, l, l, l, l, l, l, l, l, l, l, l, l, i,<backspace>,2 `(to make the change ``1`` to ``2`` after `index`)`, <esc>, :,w,q, <enter>` (editing the code file to fix the failing test), `b,a,s,h, <space>, t,e,s,t,.,s,h,<enter>` (to check all tests now pass) and finally` g,i,t, <space>, a,d,d,<space>, .,<enter>, g,i,t, <space> , c,o,m,m,i,t, <space> , -, m, <space> , MESSAGE,<enter>, g,i,t , <space> ,o,r,i,g,i,n, <space> ,m,a,i,n, <enter>` to commit and push all changes to the repository. 
 
 ----
 
@@ -29,11 +29,42 @@ All in all it was quite a lengthy way of going about it, taking me a time of 2:4
 
 #### Final Solution:
 
-`m,t,a,v,e,r,a,@,i,e,n,g,6,.,u,c,s,d,.,e,d,u,<enter>,`(log into ieng6), `c,d,<space> l,<tab>, -, c,<tab>, <enter>`(to enter the correct directory)  `g,i,t, c,l,o,n,e, <command> v,<enter>` (clone fork of repository ussing SSH URL, which I already had copied to clipboard), `b,a,s,h, <space>, t, <tab>, <enter>` (to run the tests, checking for bugs)`v,i,m, <space>, L, <tab>, ., j,a,v,a,<enter>` (to open the code file to start making an edit to the error)Using my keypad I scrolled down to near line 44 then used `j,j` ,to land on 44 which had the error.
-`e` (to jump to  the end of the first word) ,`r` (to replace a single character), `2` (the necessary edit), `<esc> `, `:,w,q, <enter> ` to save and quit. `b,a,s,h, <space>, t, <tab>, <enter>`(to check that the tests now run properly). Now that the code is fixed I commit and push my changes to the repository with `g,i,t,<space>,a,d,d,<space>,.,;,g,i,t,<space>,c,o,m,m,i,t,<space>,-,m,<space>,",m,e,s,s,a,g,e,",;,g,i,t,<space>,p,u,s,h,<space>,o,r,i,g,i,n, <space>,m,a,i,n,<enter> `(all in one command line). 
+1. Logging into ieng6:
 
-Once again keeping track of my keystrokes the tips I found the total keystrokes to complete this looked like: 
+![step 1](loggingIn.png)]
 
+`m,t,a,v,e,r,a,@,i,e,n,g,6,.,u,c,s,d,.,e,d,u,<enter>,`(log into ieng6).
 
+2. Cloning fork from Repository:
 
-As we can see from the time an the keystrokes it was a more efficient way of making this edit to the text code. In this case, it was on a very small scale edit so perhaps there is not much of a significant change. However, utilizing these functions of `vim` on a larger project would lead to many instances of faster editing overall increasing efficiency and simplicity of making edits and all from the command line.
+![step 2](gitCloneSSH.png)]
+
+`g,i,t, c,l,o,n,e, <command> v,<enter>` (clone fork of repository ussing SSH URL, which I already had copied to clipboard),
+
+3. Running the tests:
+
+![step 3](runFailure.png)]
+
+`c,d,<space> l,<tab>, -, c,<tab>, <enter>`(to enter the correct directory)   `b,a,s,h, <space>, t, <tab>, <enter>` (to run the tests, 
+checking for bugs)
+
+4. Editing code:
+
+![step 4](openVim.jpg)]
+![step 4](newEdit.jpg)]
+
+`v,i,m, <space>, L, <tab>, ., j,a,v,a,<enter>`(to open the code file to start making an edit to the error)Using my keypad I scrolled down to near line 44 then used `j,j` ,to land on 44 which had the error.`e` (to jump to  the end of the first word) ,`r` (to replace a single character), `2` (the necessary edit), `<esc> `, `:,w,q, <enter> ` to save and quit.
+
+5. Rerun Tests
+
+![step 5](rerunTests.jpg)]
+
+`b,a,s,h, <space>, t, <tab>, <enter>`(to check that the tests now run properly).
+
+6. Commit and Push Changes:
+
+![step 6](commitPush.jpg)]
+
+Now that the code is fixed I commit and push my changes to the repository with `g,i,t,<space>,a,d,d,<space>,.,;,g,i,t,<space>,c,o,m,m,i,t,<space>,-,m,<space>,",m,e,s,s,a,g,e,",;,g,i,t,<space>,p,u,s,h,<space>,o,r,i,g,i,n, <space>,m,a,i,n,<enter> `(all in one command line). 
+
+As we can see from the time an the keystrokes it was a more efficient way of making this edit to the text code. In this case, it was on a very small scale edit so perhaps there is not much of a significant change. However, utilizing these functions of `vim`, and other keyboard shortcuts in general, on a larger project would lead to many instances of faster editing overall increasing efficiency and simplicity of making edits and all from the command line.
