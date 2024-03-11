@@ -4,7 +4,7 @@
 
 ## Part 1: Debugging Scenario 
 
-**EsStemDiscussion
+**EsStemDiscussion**
 > pls help
 
 
