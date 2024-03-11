@@ -76,4 +76,4 @@ Sites I used:
 
 [Linux Shortcuts](https://www.redhat.com/sysadmin/shortcuts-command-line-navigation)
 
-[git documentation](https://git-scm.com/docs/git-add)
+[Git documentation](https://git-scm.com/docs/git-add)
