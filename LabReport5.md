@@ -5,7 +5,9 @@
 ## Part 1: Debugging Scenario 
 
 **EsStemDiscussion**
-> pls help
+> Student1: Hi, I am having trouble fixing a bug in this program!
+>
+> > TAMisha: Looking at the error do you see ....
 
 
 
