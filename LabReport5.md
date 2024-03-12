@@ -25,8 +25,28 @@ In lab we were trying to work on writing our grading script for `ListExamplesGra
 
 With the help of a TA I now see what may be my issue. Below I will include a run down of my set up and how I will fix my bug. 
 
-* The file & directory structure needed:
-  - grading-area
+>>* The file & directory structure needed:
+>> - grading-area
+      - lib
+          - hamcrest-core-1.3.jar
+          - junit-4.13.2.jar
+      - junit-output.txt
+      - ListExamples.java
+      - TestListExamples.java
+  - lib
+      - hamcrest-core-1.3.jar
+      - junit-4.13.2.jar
+  - student-submission
+      - ListExamples.java
+  - grade.sh
+  - GradeServer.java
+  - Server.java
+  - ta-output.txt
+>>  - TestListExamples.java
+ 
+
+
+
 * The contents of each file before fixing the bug:
 
 * The full command line (or lines) you ran to trigger the bug:
