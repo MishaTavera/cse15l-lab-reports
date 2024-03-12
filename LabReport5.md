@@ -12,7 +12,7 @@
 > My command and it's buggy output: ![bugoutput](buggraderouput.png)
 >
 >
-> > >TA: Looking at your output what is being printed that shouldn't be and where is this coming from? Hint look at the actual output in the `grading area`. How is the output different from other repositories that do pass? And how should this be reflected in your bash grading script?
+> > TA: Looking at your output what is being printed that shouldn't be and where is this coming from? Hint look at the actual output in the `grading area`. How is the output different from other repositories that do pass? And how should this be reflected in your bash grading script?
 
 
 
