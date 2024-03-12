@@ -25,8 +25,8 @@ In lab we were trying to work on writing our grading script for `ListExamplesGra
 
 With the help of a TA I now see what may be my issue. Below I will include a run down of my set up and how I will fix my bug. 
 
->>* The file & directory structure needed:
->> - grading-area
+* The file & directory structure needed:
+  - grading-area
       - lib
           - hamcrest-core-1.3.jar
           - junit-4.13.2.jar
@@ -42,12 +42,42 @@ With the help of a TA I now see what may be my issue. Below I will include a run
   - GradeServer.java
   - Server.java
   - ta-output.txt
->>  - TestListExamples.java
+       - TestListExamples.java
  
+* The contents of files before fixing the bug:
+  For reference here is my complete bash script `grade.sh`:
+   ```
+      CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
 
+rm -rf student-submission
+rm -rf grading-area
 
+mkdir grading-area
 
-* The contents of each file before fixing the bug:
+git clone $1 student-submission 2> ta-output.txt
+echo 'Finished cloning'
+
+if [[ -f "./student-submission/ListExamples.java" ]]
+then 
+cp student-submission/ListExamples.java grading-area/
+cp TestListExamples.java grading-area/
+cp -r lib grading-area
+else 
+    echo "Missing necessary files"
+    exit 1
+fi 
+
+cd grading-area 
+javac -cp $CPATH *.java
+
+if [[ $? -ne 0 ]]
+then 
+    echo "The program failed to compile"
+    exit 1
+fi
+
+   ```
+
 
 * The full command line (or lines) you ran to trigger the bug:
 
