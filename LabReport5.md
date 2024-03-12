@@ -5,9 +5,12 @@
 ## Part 1: Debugging Scenario 
 
 **EsStemDiscussion**
-> Student1: Hi, I am having trouble fixing a bug in this program!
+> Student1: Hi, I am working on the autograding script from lab. I am having trouble getting it to work properly. I found there to be some kind of bug in my bash script but I can't seem to find it. The script works for most of the repositories we have to test our grader only it does not seem to work for the one that is supposed to be correct. From the output I believe it has something to do the last lines of my bash script where it calculates the student's score. I have tried changing the fields for `awk` but that doesn't seem to help, can anyone please help?
+> My grading script: ![buggygradingscript](buggygrader.png)
+>My command and it's buggy output: ![bugoutput](buggygraderoutput.png)
 >
-> > TAMisha: Looking at the error do you see ....
+>
+> > TAMisha: Looking at your output what is being printed that shouldn't be and where is this coming from? Hint look at the actual output in the `grading area`. How is the output different from other repositories that do pass? And how should this be reflected in your bash grading script?
 
 
 
