@@ -97,7 +97,7 @@ OK (1 test)
 
 I am going to change the last few lines of my `grade.sh` script to better adhere to the differences in the `junit-output.txt` between what the output looks like with a flawed repository compared to a passing one. I am doing this because I realize, with the help of a TA, that what I have currently is only successful in the cases that have errors becuse my bash script is written as so. Currently, it only prints out the score by going to the lastline and printing out the number of failures and tests. For example when I run the command `bash grade.sh  https://github.com/ucsd-cse15l-f22/list-examples-subtle`, the `junit-output.txt ` looks like this : ![bad](failingrepo.png)
 
-and my output for score is: ![bugworks](buggygraderworks?.png)
+and my output for score is: ![bugworks](buggygraderworks.png)
 
 This is because my bash script is specifically coded with the intention of recieving this kind of output everytime. To fix this, I am going to account for the different `junit-output.txt` with a passing repository to correctly reflect a score. I have now changed by bash script by writing an `if` statement to consider the score of %100 and continued to keep some of my original scoring method since it worked well with the repositories with errors. This edit looks like: 
 
