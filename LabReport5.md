@@ -1,8 +1,9 @@
 # Lab Report 5
 ## Misha Tavera
 ----- 
-
 ## Part 1: Debugging Scenario 
+
+In lab we were trying to work on writing our grading script for `ListExamplesGrader.java`. For the grading script I have written it to first make sure the repository has the necessary files and that it will compile. The last component to my grading script ,`grade.sh `, I have written what is intended to return a score based on the results of out Junit tests in `TestListExamples.java`. I have gotten it to work but I found something wrong with one output of my grading script when I run `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`. I was working on this for a while but was not sure what I was doing wrong. 
 
 ---
 **EsStemDiscussion**
@@ -19,10 +20,18 @@
 > > >
 > > >My `junit-output.txt` of a repository with errors: ![error](failingrepo.png)
 > > >My `junit-output.txt` of the passing repository: ![passing](passingrepo.png)
-> > 
+
 ---
 
+With the help of a TA I now see what may be my issue. Below I will include a run down of my set up and how I will fix my bug. 
 
+* The file & directory structure needed:
+  - grading-area
+* The contents of each file before fixing the bug:
+
+* The full command line (or lines) you ran to trigger the bug:
+
+* A description of what to edit to fix the bug:
 
 
 
