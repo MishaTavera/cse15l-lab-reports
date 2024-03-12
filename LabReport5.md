@@ -46,8 +46,9 @@ With the help of a TA I now see what may be my issue. Below I will include a run
  
 * The contents of files before fixing the bug:
   For reference here is my complete bash script `grade.sh`:
-   ```
-      CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
+
+```
+CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
 
 rm -rf student-submission
 rm -rf grading-area
@@ -74,15 +75,52 @@ if [[ $? -ne 0 ]]
 then 
     echo "The program failed to compile"
     exit 1
-fi
+  fi
+```
+The `junit-output.txt` file 
 
-   ```
+```
+JUnit version 4.13.2
+.
+Time: 0.004
 
+OK (1 test)
+
+```
 
 * The full command line (or lines) you ran to trigger the bug:
 
+```
+`bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`
+```
 * A description of what to edit to fix the bug:
 
+I am going to change the last few lines of my `grade.sh` script to better adhere to the differences in the `junit-output.txt` between what the output looks like with a flawed repository compared to a passing one. I am doing this because I realize, with the help of a TA, that what I have currently is only successful in the cases that have errors becuse my bash script is written as so. Currently, it only prints out the score by going to the lastline and printing out the number of failures and tests. For example when I run the command `bash grade.sh  https://github.com/ucsd-cse15l-f22/list-examples-subtle`, the `junit-output.txt ` looks like this : ![bad](failingrepo.png)
+
+and my output for score is: ![bugworks](buggygraderworks?.png)
+
+This is because my bash script is specifically coded with the intention of recieving this kind of output everytime. To fix this, I am going to account for the different `junit-output.txt` with a passing repository to correctly reflect a score. I have now changed by bash script by writing an `if` statement to consider the score of %100 and continued to keep some of my original scoring method since it worked well with the repositories with errors. This edit looks like: 
+
+```
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
+lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
+
+if [[ $lastline = *OK* ]]
+then
+    echo "Grade: 100%"
+else
+    tests=$(echo $lastline | awk -F'[, ]' '{print $3}')
+    failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
+    successes=$((tests - failures))
+    echo "Grade: $successes / $tests"
+fi
+```
+To ensure that this now works. I reran both a repository with erros and one passes all tests, to make sure I have fixed my bug but also to make sure I didn't unintentionally also effect the grading that worked on other repositories. This is what I found : 
+
+![passingyay](nowbothpass.png)
+
+
+From this I can see that I have succesfully fixed the bug in my `grade.sh` script. 
 
 
 -----
