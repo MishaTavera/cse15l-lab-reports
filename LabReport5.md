@@ -15,7 +15,7 @@
 >
 > > TA: Looking at your output what is being printed that shouldn't be and where is this coming from? Hint look at the actual output in the `grading area`. How is the output different from other repositories that do pass? And how should this be reflected in your bash grading script?
 > >
-> > Misha: Thank you this was very helpful I see where I went wrong. My bug is in that my `grade.sh` the lines to print out a score are hard coded. By looking in `junit-output.txt`, which is where the jUnit output of my `TestListExamples.java` is redirected, I see that the bash scrip is only set up to successfully print and score the repositories that had some kind of error in them. To correct this I will add to my bash script to account for not only the repositories with errors but the ones that pass and print a different output in `junit-output.txt`.
+> > >Misha: Thank you this was very helpful I see where I went wrong. My bug is in that my `grade.sh` the lines to print out a score are hard coded. By looking in `junit-output.txt`, which is where the jUnit output of my `TestListExamples.java` is redirected, I see that the bash scrip is only set up to successfully print and score the repositories that had some kind of error in them. To correct this I will add to my bash script to account for not only the repositories with errors but the ones that pass and print a different output in `junit-output.txt`.
 > >
 > > >My `junit-output.txt` of a repository with errors: ![error](failingrepo.png)
 > > >My `junit-output.txt` of the passing repository: ![passing](passingrepo.png)
