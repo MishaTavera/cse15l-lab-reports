@@ -115,7 +115,7 @@ else
     echo "Grade: $successes / $tests"
 fi
 ```
-Using what I found the output to look like of a passing repository, I used and `if` statment to first check that if the last line had `OK` that it return the correct grade of 100%. Should this not be the case and the `junit-output.txt` not contain the `OK` it proceeds to the `else` statement which the correct score bases on the tests and failures of what is returned when a flawed repository is ran. To ensure that this now works. I reran both a repository with erros and one passes all tests, I did this to make sure that I fixed my bug but also to make sure I didn't unintentionally also effect the grading that worked on other repositories. This is what I found : 
+Using what I found the output to look like of a passing repository, I used and `if` statment to first check that if the last line had `OK` that it return the correct grade of 100%. Should this not be the case and the `junit-output.txt` not contain the `OK` it proceeds to the `else` statement which the correct score based on the tests and failures of what is returned when a flawed repository is ran. To ensure that this now works. I reran both a repository with erros and one passes all tests, I did this to make sure that I fixed my bug but also to make sure I didn't unintentionally also effect the grading that worked on other repositories. This is what I found : 
 
 ![passingyay](nowbothpass.png)
 
